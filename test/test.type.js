@@ -84,7 +84,7 @@ tape( 'if provided a typed array from a different realm, the function returns th
 	var i;
 
 	typeName = proxyquire( './../lib/type.js', {
-		'@stdlib/assert/instance-of': instanceOf
+		'@stdlib/assert-instance-of': instanceOf
 	});
 
 	values = [
