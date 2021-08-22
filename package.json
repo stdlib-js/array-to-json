@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-to-json",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Return a JSON representation of a typed array.",
   "license": "Apache-2.0",
   "author": {
