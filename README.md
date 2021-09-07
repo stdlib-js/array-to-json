@@ -234,6 +234,20 @@ json = toJSON( arr );
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/array/reviver`][@stdlib/array/reviver]: revive a JSON-serialized typed array.
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -311,7 +325,11 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c
 
+<!-- <related-links> -->
+
 [@stdlib/array/reviver]: https://github.com/stdlib-js/array-reviver
+
+<!-- </related-links> -->
 
 </section>
 
