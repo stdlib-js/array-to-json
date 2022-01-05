@@ -86,6 +86,8 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 
     -   [`Float64Array`][@stdlib/array/float64]
     -   [`Float32Array`][@stdlib/array/float32]
+    -   [`Complex128Array`][@stdlib/array/complex128]
+    -   [`Complex64Array`][@stdlib/array/complex64]
     -   [`Int32Array`][@stdlib/array/int32]
     -   [`Uint32Array`][@stdlib/array/uint32]
     -   [`Int16Array`][@stdlib/array/int16]
@@ -96,7 +98,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 
 -   The implementation provides basic support for custom typed arrays and sets the `type` field to the closest known typed array type.
 
-    <!-- eslint-disable no-restricted-syntax, no-useless-constructor, new-cap, stdlib/require-globals -->
+    <!-- eslint-disable no-restricted-syntax, no-useless-constructor, new-cap, stdlib/require-globals, node/no-unsupported-features/es-syntax -->
 
     ```javascript
     class CustomArray extends Float64Array() {
@@ -138,6 +140,8 @@ var Uint16Array = require( '@stdlib/array-uint16' );
 var Int8Array = require( '@stdlib/array-int8' );
 var Uint8Array = require( '@stdlib/array-uint8' );
 var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
+var Complex64Array = require( '@stdlib/array-complex64' );
+var Complex128Array = require( '@stdlib/array-complex128' );
 var toJSON = require( '@stdlib/array-to-json' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
@@ -155,6 +159,24 @@ json = toJSON( arr );
     {
         'type': 'Float32Array',
         'data': [ 5.0, -3.0 ]
+    }
+*/
+
+arr = new Complex128Array( [ 5.0, 3.0 ] );
+json = toJSON( arr );
+/* returns
+    {
+        'type': 'Complex128Array',
+        'data': [ 5.0, 3.0 ]
+    }
+*/
+
+arr = new Complex64Array( [ 5.0, 3.0 ] );
+json = toJSON( arr );
+/* returns
+    {
+        'type': 'Complex64Array',
+        'data': [ 5.0, 3.0 ]
     }
 */
 
@@ -314,6 +336,10 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 [@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
