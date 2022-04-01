@@ -1,0 +1,39 @@
+{
+  "name": "@stdlib/array-to-json",
+  "version": "0.0.0",
+  "description": "Return a JSON representation of a typed array.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/array-to-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdtypes",
+    "utils",
+    "util",
+    "utilities",
+    "utility",
+    "typed",
+    "array",
+    "arr",
+    "typed-array",
+    "typed array",
+    "serialize",
+    "marshal",
+    "tojson",
+    "json",
+    "to",
+    "convert"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
