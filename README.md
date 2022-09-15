@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# toJSON
+# typedarray2json
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -34,41 +34,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-to-json
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-toJSON = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js' )
+var typedarray2json = require( '@stdlib/array-to-json' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var toJSON = require( 'path/to/vendor/umd/array-to-json/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.toJSON;
-})();
-</script>
-```
-
-#### toJSON( typedarray )
+#### typedarray2json( typedarray )
 
 Returns a [JSON][json] representation of a typed array.
 
@@ -77,7 +69,7 @@ var Float64Array = require( '@stdlib/array-float64' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
 
-var json = toJSON( arr );
+var json = typedarray2json( arr );
 /* returns
     {
         'type': 'Float64Array',
@@ -125,7 +117,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 
     var arr = new CustomArray( [ 5.0, 3.0 ] );
 
-    var json = toJSON( arr );
+    var json = typedarray2json( arr );
     /* returns
         {
             'type': 'Float64Array',
@@ -146,27 +138,22 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-int16@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint16@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-int8@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8c@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Float64Array = require( '@stdlib/array-float64' );
+var Float32Array = require( '@stdlib/array-float32' );
+var Int32Array = require( '@stdlib/array-int32' );
+var Uint32Array = require( '@stdlib/array-uint32' );
+var Int16Array = require( '@stdlib/array-int16' );
+var Uint16Array = require( '@stdlib/array-uint16' );
+var Int8Array = require( '@stdlib/array-int8' );
+var Uint8Array = require( '@stdlib/array-uint8' );
+var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
+var Complex64Array = require( '@stdlib/array-complex64' );
+var Complex128Array = require( '@stdlib/array-complex128' );
+var typedarray2json = require( '@stdlib/array-to-json' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
-var json = toJSON( arr );
+var json = typedarray2json( arr );
 /* returns
     {
         'type': 'Float64Array',
@@ -175,7 +162,7 @@ var json = toJSON( arr );
 */
 
 arr = new Float32Array( [ 5.0, -3.0 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Float32Array',
@@ -184,7 +171,7 @@ json = toJSON( arr );
 */
 
 arr = new Complex128Array( [ 5.0, 3.0 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Complex128Array',
@@ -193,7 +180,7 @@ json = toJSON( arr );
 */
 
 arr = new Complex64Array( [ 5.0, 3.0 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Complex64Array',
@@ -202,7 +189,7 @@ json = toJSON( arr );
 */
 
 arr = new Int32Array( [ -5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Int32Array',
@@ -211,7 +198,7 @@ json = toJSON( arr );
 */
 
 arr = new Uint32Array( [ 5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Uint32Array',
@@ -220,7 +207,7 @@ json = toJSON( arr );
 */
 
 arr = new Int16Array( [ -5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Int16Array',
@@ -229,7 +216,7 @@ json = toJSON( arr );
 */
 
 arr = new Uint16Array( [ 5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Uint16Array',
@@ -238,7 +225,7 @@ json = toJSON( arr );
 */
 
 arr = new Int8Array( [ -5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Int8Array',
@@ -247,7 +234,7 @@ json = toJSON( arr );
 */
 
 arr = new Uint8Array( [ 5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Uint8Array',
@@ -256,18 +243,13 @@ json = toJSON( arr );
 */
 
 arr = new Uint8ClampedArray( [ 5, 3 ] );
-json = toJSON( arr );
+json = typedarray2json( arr );
 /* returns
     {
         'type': 'Uint8ClampedArray',
         'data': [ 5, 3 ]
     }
 */
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -367,31 +349,31 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [json]: http://www.json.org/
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/umd
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32/tree/umd
+[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16/tree/umd
+[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16
 
-[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16/tree/umd
+[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16
 
-[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8/tree/umd
+[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8
 
-[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8/tree/umd
+[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8
 
-[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c/tree/umd
+[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c
 
 <!-- <related-links> -->
 
-[@stdlib/array/reviver]: https://github.com/stdlib-js/array-reviver/tree/umd
+[@stdlib/array/reviver]: https://github.com/stdlib-js/array-reviver
 
 <!-- </related-links> -->
 
