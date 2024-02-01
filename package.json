@@ -53,7 +53,7 @@
     "@stdlib/assert-is-typed-array": "^0.1.0",
     "@stdlib/strided-base-reinterpret-complex128": "^0.1.1",
     "@stdlib/strided-base-reinterpret-complex64": "^0.1.1",
-    "@stdlib/string-format": "^0.1.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.1",
     "@stdlib/types": "^0.2.0",
     "@stdlib/utils-constructor-name": "^0.1.1",
     "@stdlib/utils-get-prototype-of": "^0.1.1"
