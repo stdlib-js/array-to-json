@@ -2,7 +2,7 @@
 
 @license Apache-2.0
 
-Copyright (c) 2018 The Stdlib Authors.
+Copyright (c) 2024 The Stdlib Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -109,6 +109,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
     -   [`Float32Array`][@stdlib/array/float32]
     -   [`Complex128Array`][@stdlib/array/complex128]
     -   [`Complex64Array`][@stdlib/array/complex64]
+    -   [`BooleanArray`][@stdlib/array/bool]
     -   [`Int32Array`][@stdlib/array/int32]
     -   [`Uint32Array`][@stdlib/array/uint32]
     -   [`Int16Array`][@stdlib/array/int16]
@@ -163,6 +164,7 @@ var Uint8Array = require( '@stdlib/array-uint8' );
 var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
 var Complex64Array = require( '@stdlib/array-complex64' );
 var Complex128Array = require( '@stdlib/array-complex128' );
+var BooleanArray = require( '@stdlib/array-bool' );
 var typedarray2json = require( '@stdlib/array-to-json' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
@@ -198,6 +200,15 @@ json = typedarray2json( arr );
     {
         'type': 'Complex64Array',
         'data': [ 5.0, 3.0 ]
+    }
+*/
+
+arr = new BooleanArray( [ true, false ] );
+json = typedarray2json( arr );
+/* returns
+    {
+        'type': 'BooleanArray',
+        'data': [ 1, 0 ]
     }
 */
 
@@ -372,6 +383,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 [@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+
+[@stdlib/array/bool]: https://github.com/stdlib-js/array-bool
 
 [@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
