@@ -56,7 +56,7 @@
     "@stdlib/strided-base-reinterpret-boolean": "github:stdlib-js/strided-base-reinterpret-boolean#main",
     "@stdlib/strided-base-reinterpret-complex128": "^0.2.1",
     "@stdlib/strided-base-reinterpret-complex64": "^0.2.0",
-    "@stdlib/string-format": "^0.2.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.1",
     "@stdlib/types": "^0.3.2",
     "@stdlib/utils-constructor-name": "^0.2.1",
     "@stdlib/utils-get-prototype-of": "^0.2.1",
