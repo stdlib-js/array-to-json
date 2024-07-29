@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-to-json/tags). For example,
+
+```javascript
 import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.0-esm/index.mjs';
 ```
 
@@ -152,7 +157,7 @@ import Uint8ClampedArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
 import BooleanArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-bool@esm/index.mjs';
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.0-esm/index.mjs';
+import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@esm/index.mjs';
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
 var json = typedarray2json( arr );
