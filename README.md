@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@deno/mod.js';
+import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.0-deno/mod.js';
 ```
 
 #### typedarray2json( typedarray )
@@ -147,7 +147,7 @@ import Uint8ClampedArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
 import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
 import BooleanArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-bool@deno/mod.js';
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@deno/mod.js';
+import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.0-deno/mod.js';
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
 var json = typedarray2json( arr );
