@@ -57,7 +57,7 @@
     "@stdlib/strided-base-reinterpret-complex128": "^0.2.2",
     "@stdlib/strided-base-reinterpret-complex64": "^0.2.1",
     "@stdlib/string-format": "^0.2.2",
-    "@stdlib/types": "^0.4.1",
+    "@stdlib/types": "^0.4.3",
     "@stdlib/utils-constructor-name": "^0.2.2",
     "@stdlib/utils-get-prototype-of": "^0.2.2",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
