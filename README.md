@@ -54,7 +54,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-typedarray2json = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js' )
+typedarray2json = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -66,7 +66,7 @@ var typedarray2json = require( 'path/to/vendor/umd/array-to-json/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -174,7 +174,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-bool@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.1-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
