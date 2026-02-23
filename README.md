@@ -45,19 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-to-json
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-to-json/tags). For example,
-
-```javascript
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@v0.3.1-deno/mod.js';
+var typedarray2json = require( '@stdlib/array-to-json' );
 ```
 
 #### typedarray2json( typedarray )
@@ -65,7 +78,7 @@ import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json
 Returns a [JSON][json] representation of a typed array.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
 
@@ -140,19 +153,19 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
-import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
-import Uint32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint32@deno/mod.js';
-import Int16Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int16@deno/mod.js';
-import Uint16Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint16@deno/mod.js';
-import Int8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int8@deno/mod.js';
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import Uint8ClampedArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8c@deno/mod.js';
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
-import BooleanArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-bool@deno/mod.js';
-import typedarray2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-json@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var Float32Array = require( '@stdlib/array-float32' );
+var Int32Array = require( '@stdlib/array-int32' );
+var Uint32Array = require( '@stdlib/array-uint32' );
+var Int16Array = require( '@stdlib/array-int16' );
+var Uint16Array = require( '@stdlib/array-uint16' );
+var Int8Array = require( '@stdlib/array-int8' );
+var Uint8Array = require( '@stdlib/array-uint8' );
+var Uint8ClampedArray = require( '@stdlib/array-uint8c' );
+var Complex64Array = require( '@stdlib/array-complex64' );
+var Complex128Array = require( '@stdlib/array-complex128' );
+var BooleanArray = require( '@stdlib/array-bool' );
+var typedarray2json = require( '@stdlib/array-to-json' );
 
 var arr = new Float64Array( [ 5.0, 3.0 ] );
 var json = typedarray2json( arr );
@@ -298,7 +311,7 @@ json = typedarray2json( arr );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -328,8 +341,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/array-to-json.svg
 [npm-url]: https://npmjs.org/package/@stdlib/array-to-json
 
-[test-image]: https://github.com/stdlib-js/array-to-json/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/array-to-json/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/array-to-json/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/array-to-json/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/array-to-json/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/array-to-json?branch=main
@@ -363,33 +376,33 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [json]: http://www.json.org/
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/deno
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/deno
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/deno
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/deno
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/bool]: https://github.com/stdlib-js/array-bool/tree/deno
+[@stdlib/array/bool]: https://github.com/stdlib-js/array-bool
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32/tree/deno
+[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/deno
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16/tree/deno
+[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16
 
-[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16/tree/deno
+[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16
 
-[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8/tree/deno
+[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8
 
-[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8/tree/deno
+[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8
 
-[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c/tree/deno
+[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c
 
 <!-- <related-links> -->
 
-[@stdlib/array/reviver]: https://github.com/stdlib-js/array-reviver/tree/deno
+[@stdlib/array/reviver]: https://github.com/stdlib-js/array-reviver
 
 <!-- </related-links> -->
 
