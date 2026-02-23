@@ -37,9 +37,9 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-bool": "^0.1.1",
-    "@stdlib/array-complex128": "^0.3.1",
-    "@stdlib/array-complex64": "^0.3.1",
+    "@stdlib/array-bool": "^0.1.2",
+    "@stdlib/array-complex128": "^0.3.2",
+    "@stdlib/array-complex64": "^0.3.2",
     "@stdlib/array-float32": "^0.2.3",
     "@stdlib/array-float64": "^0.2.3",
     "@stdlib/array-int16": "^0.2.3",
@@ -68,7 +68,7 @@
     "@stdlib/assert-is-browser": "^0.2.3",
     "@stdlib/assert-is-plain-object": "^0.2.3",
     "@stdlib/math-base-special-pow": "^0.3.1",
-    "@stdlib/random-base-randu": "^0.2.2",
+    "@stdlib/random-base-randu": "^0.2.3",
     "@stdlib/utils-define-property": "^0.2.5",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
