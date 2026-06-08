@@ -40,6 +40,7 @@
     "@stdlib/array-bool": "^0.1.2",
     "@stdlib/array-complex128": "^0.3.2",
     "@stdlib/array-complex64": "^0.3.2",
+    "@stdlib/array-float16": "github:stdlib-js/array-float16#main",
     "@stdlib/array-float32": "^0.2.3",
     "@stdlib/array-float64": "^0.2.3",
     "@stdlib/array-int16": "^0.2.3",
@@ -57,7 +58,7 @@
     "@stdlib/strided-base-reinterpret-complex128": "^0.2.3",
     "@stdlib/strided-base-reinterpret-complex64": "^0.2.2",
     "@stdlib/string-format": "^0.2.3",
-    "@stdlib/types": "^0.4.3",
+    "@stdlib/types": "^0.5.1",
     "@stdlib/utils-constructor-name": "^0.2.3",
     "@stdlib/utils-get-prototype-of": "^0.2.3",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.3"

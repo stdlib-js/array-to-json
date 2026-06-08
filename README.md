@@ -107,6 +107,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 
     -   [`Float64Array`][@stdlib/array/float64]
     -   [`Float32Array`][@stdlib/array/float32]
+    -   [`Float16Array`][@stdlib/array/float16]
     -   [`Complex128Array`][@stdlib/array/complex128]
     -   [`Complex64Array`][@stdlib/array/complex64]
     -   [`BooleanArray`][@stdlib/array/bool]
@@ -155,6 +156,7 @@ For guidance on reviving a JSON-serialized typed array, see [`reviver()`][@stdli
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 var Float32Array = require( '@stdlib/array-float32' );
+var Float16Array = require( '@stdlib/array-float16' );
 var Int32Array = require( '@stdlib/array-int32' );
 var Uint32Array = require( '@stdlib/array-uint32' );
 var Int16Array = require( '@stdlib/array-int16' );
@@ -181,6 +183,15 @@ json = typedarray2json( arr );
 /* returns
     {
         'type': 'Float32Array',
+        'data': [ 5.0, -3.0 ]
+    }
+*/
+
+arr = new Float16Array( [ 5.0, -3.0 ] );
+json = typedarray2json( arr );
+/* returns
+    {
+        'type': 'Float16Array',
         'data': [ 5.0, -3.0 ]
     }
 */
@@ -379,6 +390,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+
+[@stdlib/array/float16]: https://github.com/stdlib-js/array-float16
 
 [@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
